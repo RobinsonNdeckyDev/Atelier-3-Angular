@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "bootstrap/dist/css/bootstrap";
+
+
+body {
+    padding: 3%;
+    margin: 0;
+}
+
+@media(max-width:768px) {
+    body {
+        height: 100%;
+        border: none;
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    /* #validation{
+        height: 100%;
+    } */
+}

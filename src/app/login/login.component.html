@@ -1,0 +1,58 @@
+<section id="validation" class="border mt-4">
+    <div class="validationContainer row p-0">
+        <div class="photo col-12 col-md-5 p-0 gap-5">
+            <img src="../../assets/image.jpg" alt="">
+        </div>
+        <div class="Formulaire col-12 col-md-7 pt-5" *ngIf="afficher">
+            <div class="formContent w-75">
+                <h3 class="fs-2 fw-bold"><img src="../../assets/logodecky.png" alt="">Logo</h3>
+                <p class="sign">Sign in to your account</p>
+                <div>
+                    <div class="mb-5">
+                        <input type="email" class="form-control" placeholder="Email Address" [(ngModel)]="email">
+                    </div>
+                    <div class="mb-4">
+                        <input type="password" class="form-control" placeholder="**************" [(ngModel)]="password">
+                    </div>
+                    <button type="button" class="btn1 mb-5 w-100" (click)="verifyformLogin()">Login</button>
+
+                    <div class="mb-4">
+                        <span class="forgot">Forgot password?</span>
+                        <p class="register" (click)="form()">Don't have an account? Register here</p>
+                        
+                        <span class="terms">Terms of use. Privacy policy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Formulaire col-12 col-md-7" *ngIf="!afficher">
+            <div class="formContent w-md-75">
+                <h3 class="fs-2 fw-bold"><img src="../../assets/logodecky.png" alt="">Logo</h3>
+                <p class="sign">Create your account</p>
+                <div>
+                    <div class="mb-3">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" class="form-control" placeholder="Prenom" [(ngModel)]="prenom">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nom">Nom</label>
+                        <input type="text" class="form-control" placeholder="nom" [(ngModel)]="nom">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="emailAdress">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Email Address" [(ngModel)]="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" placeholder="**************" [(ngModel)]="password">
+                    </div>
+                    <button type="button" class="btn1 w-100" (click)="form(); verifyFormRegister()">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
